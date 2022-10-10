@@ -27,10 +27,8 @@ on:
 jobs:
   reusable_workflow_job:
     name: ${{ github.ref_name }}
-    uses: zhuoqiw/docker-build-push/.github/workflows/main.yml@master
+    uses: qubo188612/docker-build-push/.github/workflows/main.yml@master
     with:
-      username: ${{ secrets.DOCKER_HUB_USER_NAME }}
-      password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       ubuntu_version: ${{ github.event.inputs.ubuntu_version }}
       platforms: ${{ github.event.inputs.platforms }}
       image_tag: 4.5.5
