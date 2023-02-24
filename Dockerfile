@@ -18,7 +18,7 @@ RUN wget --no-check-certificate https://github.com/opencv/opencv/archive/refs/ta
 RUN cmake  \
     -D CMAKE_INSTALL_PREFIX:STRING=/opt/opencv \
     -D CMAKE_BUILD_TYPE:STRING=Release \
-    -D BUILD_LIST:STRING=core,imgproc,calib3d,imgcodecs \
+    -D BUILD_LIST:STRING=core,imgproc,calib3d,imgcodecs,tracking \
     -D BUILD_TESTS:BOOL=OFF \
     -D BUILD_PERF_TESTS:BOOL=OFF \
     -D BUILD_EXAMPLES:BOOL=OFF \
